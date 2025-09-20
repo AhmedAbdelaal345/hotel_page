@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:hotel_page/pages/booking_page.dart';
 import 'package:hotel_page/pages/favorite_page.dart';
@@ -10,13 +8,13 @@ import 'package:hotel_page/utils/app_constants.dart';
 class WrapperPage extends StatelessWidget {
   const WrapperPage({super.key});
 
-  @override
   final List<Widget> _pages = const [
     HomePage(),
     BookingPage(),
     FavoritePage(),
     ProfilePage(),
   ];
+  @override
   Widget build(BuildContext context) {
     int _selectedIndex = 0;
     return StatefulBuilder(
