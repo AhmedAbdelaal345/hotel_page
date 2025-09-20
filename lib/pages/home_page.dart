@@ -468,27 +468,31 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 ],
               ),
               SizedBox(height: 24),
-              ElevatedButton(
-                style: ButtonStyle(
-                  minimumSize: WidgetStatePropertyAll(
-                    Size(double.infinity, 48),
-                  ),
-                  shape: WidgetStatePropertyAll(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
+              ScaleTransition(
+                scale: _scaleAnimation,
+                alignment: Alignment.center,
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                    minimumSize: WidgetStatePropertyAll(
+                      Size(double.infinity, 48),
+                    ),
+                    shape: WidgetStatePropertyAll(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                    ),
+                    backgroundColor: WidgetStatePropertyAll(
+                      AppConstants.bottomNavigationBarColor,
                     ),
                   ),
-                  backgroundColor: WidgetStatePropertyAll(
-                    AppConstants.bottomNavigationBarColor,
-                  ),
-                ),
-                onPressed: () {},
-                child: Text(
-                  "BOOK NOW",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w700,
+                  onPressed: () {},
+                  child: Text(
+                    "BOOK NOW",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                 ),
               ),
